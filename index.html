@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML and CSS only landing page</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <meta http-equiv="refresh" content="4;url=https://harry.ml" />
+</head>
+<body onload="tW()">
+    <div class="landing">
+        <h1 id="text"></h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+            var na = 0;
+            var txt = "Harry's TypeWriter Thing";  
+            var speed = 150;
+            function tW() {
+                if(na < txt.length) {
+                    var txtPrint = txt.toUpperCase();
+                    document.getElementById("text").innerHTML += txtPrint.charAt(na);
+                    na++;
+                    document.getElementById("text").innerText + '<span class="line">|</span>';
+                    setTimeout(tW, speed);
+                }
+            }
+    </script>
+</body>
+</html>
